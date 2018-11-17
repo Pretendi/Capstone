@@ -15,7 +15,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}')
-            return redirect('login')
+            return redirect('survey')
     else:
         form = UserRegisterForm()
     return render(request, 'register_paul.html', {'form': form})
@@ -24,8 +24,8 @@ def survey(request):
     return render(request, 'questionaires.html')
     #if request.method == ""
 
-def profile(request):
-    return render(request, )
+#def profile(request):
+#    return render(request, )
     # Simon's default code
 """
 class LoginView(FormView):

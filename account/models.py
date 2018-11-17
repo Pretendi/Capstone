@@ -4,10 +4,13 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class SurveyID(models.Model):
-	question1 = models.TextField()
-	question2 = models.TextField()
-	question3 = models.TextField()
-	question4 = models.TextField()
+	surveyID = models.AutoField(primary_key=True)
+	userID = models.ForeignKey(User, on_delete=models.CASCADE)
+	age = models.IntegerField()
+	gender = models.CharField(max_length=2)
+	status = models.CharField(max_length=2)
+	investment = models.CharField(max_length=2)
+	combination = models.CharField(max_length=2)
 
 """
 @receiver(post_save, sender=User)
