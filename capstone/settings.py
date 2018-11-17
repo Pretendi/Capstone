@@ -131,4 +131,4 @@ MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'webapp-home'
+LOGIN_REDIRECT_URL = 'select'

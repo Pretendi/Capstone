@@ -60,9 +60,9 @@
 						{% if user.is_authenticated %}
 							<ul>
 								{% if user.first_name == '' %}
-									<li class="btn-cta"><a href="#"><span>{{request.user.username}}'s Profile</span></a></li>
+									<li class="btn-cta"><a href="{% url 'select' %}"><span>{{request.user.username}}'s Services</span></a></li>
 								{% else %}
-									<li class="btn-cta"><a href="#"><span>{{request.user.first_name}}'s Profile</span></a></li>
+									<li class="btn-cta"><a href="{% url 'select' %}"><span>{{request.user.first_name}}'s Services</span></a></li>
 								{% endif %}
 								<li class="btn-cta"><a href="{% url 'logout' %}"><span>Logout</span></a></li>
 							</ul>
