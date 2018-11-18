@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import authenticate
@@ -24,3 +25,8 @@ class UserRegisterForm(UserCreationForm):
 	class Meta:		#gives us a nested namespace for configurations
 		model = User 	#this is the model that will be saved to
 		fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+
+class SurveySubmissionForm(ModelForm):
+    class Meta:
+        model = SurveyID
+        fields = ['age','gender','status','investment','combination']

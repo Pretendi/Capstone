@@ -15,3 +15,6 @@ class index(TemplateView):
 
 def home(request):
 	return render(request, 'index.html')
+
+class homeView(TemplateView):
+	template_name = "index.html"
