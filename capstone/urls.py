@@ -13,8 +13,8 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='logout_paul.html'), name='logout'),
     path('survey/', account_views.survey, name='survey'),
     path('select/', service_views.select, name='select'),
-    path('backtest/', service_views.select, name='backtest'),
-    path('better/', service_views.select, name='better'),
-    path('goal/', service_views.select, name='goal'),
+    path('backtest/', service_views.backtest, name='backtest'),
+    path('better/', service_views.better, name='better'),
+    path('goal/', service_views.goal, name='goal'),
     path('admin/', admin.site.urls),
 ]
